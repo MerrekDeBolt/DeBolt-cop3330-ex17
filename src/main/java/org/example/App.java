@@ -11,7 +11,6 @@ public class App {
 
     public static void main(String[] args)
     {
-        String input;
         double BAC, alcoholConsumed, weight;
         int gender, hours;
 
