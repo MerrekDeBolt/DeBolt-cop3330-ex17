@@ -17,21 +17,69 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter a 1 if you are a male or a 2 if you are female: ");
-        input = scanner.nextLine();
-        gender = Integer.parseInt(input);
+        do
+        {
+            System.out.println("Enter a 1 if you are a male or a 2 if you are female: ");
+            try
+            {
+                scanner = new Scanner(System.in);
+                gender = scanner.nextInt();
+            }
+            catch (Exception ex)
+            {
+                System.out.println("Invalid input");
+                gender = -1;
+            }
+        }
+        while (gender == -1);
 
-        System.out.println("How many ounces of alcohol did you have? ");
-        input = scanner.nextLine();
-        alcoholConsumed = Double.parseDouble(input);
+        do
+        {
+            System.out.println("How many ounces of alcohol did you have? ");
+            try
+            {
+                scanner = new Scanner(System.in);
+                alcoholConsumed = scanner.nextDouble();
+            }
+            catch (Exception ex)
+            {
+                System.out.println("Invalid input");
+                alcoholConsumed = -1;
+            }
+        }
+        while (alcoholConsumed == -1);
 
-        System.out.println("What is your weight, in pounds? ");
-        input = scanner.nextLine();
-        weight = Double.parseDouble(input);
+        do
+        {
+            System.out.println("What is your weight, in pounds? ");
+            try
+            {
+                scanner = new Scanner(System.in);
+                weight = scanner.nextDouble();
+            }
+            catch (Exception ex)
+            {
+                System.out.println("Invalid input");
+                weight = -1;
+            }
+        }
+        while (weight == -1);
 
-        System.out.println("How many hours has it been since your last drink? ");
-        input = scanner.nextLine();
-        hours = Integer.parseInt(input);
+        do
+        {
+            System.out.println("How many hours has it been since your last drink? ");
+            try
+            {
+                scanner = new Scanner(System.in);
+                hours = scanner.nextInt();
+            }
+            catch (Exception ex)
+            {
+                System.out.println("Invalid input");
+                hours = -1;
+            }
+        }
+        while (hours == -1);
 
         double rate;
         if (gender == 1)
