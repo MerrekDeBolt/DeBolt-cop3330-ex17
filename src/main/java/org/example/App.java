@@ -15,7 +15,7 @@ public class App {
         double BAC, alcoholConsumed, weight;
         int gender, hours;
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner;
 
         do
         {
